@@ -1,14 +1,14 @@
+import { categoriesData } from "../data/categoriesData.js";
 import { PageTemplate } from "../templates/PageTemplate.js";
+import { categoriesListSection } from "../ui/categoriesList.js";
+import { pageTitle } from "../ui/pageTitle.js";
 
 export class PageCategories extends PageTemplate {
     main() {
         return `
-            <main class="container">
-                <div class="row">
-                    <div class="col-12">
-                        CATEGORIES PAGE CONTENT
-                    </div>
-                </div>
+            <main>
+                ${pageTitle('Categories')}
+                ${categoriesListSection(categoriesData)}
             </main>`;
     }
 }
