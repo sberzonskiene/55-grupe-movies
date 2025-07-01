@@ -1,7 +1,8 @@
-import { PageTemplate } from "../templates/PageTemplate";
+import { PageTemplate } from "../templates/PageTemplate.js";
 
 export class PageHome extends PageTemplate {
     main() {
-        return ``
+        return `
+        <main`
     }
 }
