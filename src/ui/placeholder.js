@@ -3,10 +3,13 @@ export function placeholder(title, list) {
 
     if (Array.isArray(list)) {
         for (const item of list) {
-        HTML += `<li>${item}</li>`;
-   }
+            HTML += `<li>${item}</li>`;
+        }
+    }
 
-   return `
-    <div class="alert alert-info" role="alert">`
-}
+    return `
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <h3>${title}</h3>
+            ${HTML ? `<ul>${HTML}</ul>` : ''}
+        </div>`;
 }
