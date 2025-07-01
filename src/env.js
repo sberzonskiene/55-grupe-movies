@@ -14,10 +14,11 @@ for (const str of argList) {
 
 dotenv.config({
     path: 'src/.env.' + args.env,
+    quiet: true,
 });
 
 export const PORT = +process.env.PORT ?? 5517;
-export const TITLE = +process.env.TITLE ?? 'Project title';
-export const DB_DATABASE = +process.env.DB_DATABASE ?? 'test_db'; 
-export const DB_USER = +process.env.DB_USER ?? 'test_user'; 
-export const DB_PASSWORD = +process.env.DB_PASSWORD  ?? 'test_password';
+export const TITLE = process.env.TITLE ?? 'Project title';
+export const DB_DATABASE = process.env.DB_DATABASE ?? 'test_db'; 
+export const DB_USER = process.env.DB_USER ?? 'test_user'; 
+export const DB_PASSWORD = process.env.DB_PASSWORD  ?? 'test_password';
