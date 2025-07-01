@@ -18,6 +18,7 @@ export class PageTemplate {
                 <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
                 <link rel="manifest" href="/favicon/site.webmanifest" />
                 <link rel="stylesheet" href="/css/bootstrap.min.css">
+                <link rel="stylesheet" href="/css/vendor/font-awesome.min.css"/>
             </head>`;
     }
 
