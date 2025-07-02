@@ -1,0 +1,1 @@
+const formDOM = document.forms[0];
