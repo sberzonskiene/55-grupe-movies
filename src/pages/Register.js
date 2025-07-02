@@ -7,6 +7,7 @@ export class PageRegister extends PageTemplate {
         super(req);
         this.pageJS = 'register';
     }
+
     main() {
         return `
             <main>
