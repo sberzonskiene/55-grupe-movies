@@ -18,5 +18,5 @@ export function formatDuration(minutes = 100) {
         hourText += 's';
     }
 
-    return hourText + (hourText && minText ? '' : '') minText;
+    return hourText + (hourText && minText ? '' : '') + minText;
 }
