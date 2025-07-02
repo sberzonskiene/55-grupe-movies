@@ -1,13 +1,13 @@
 export const moviesData = [
     {
-        title: 'Matrix',
-        url: '/matrix',
+        title: 'Ratatouille',
+        url: '/ratatouille',
         description: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        durationInMinutes: 100,
-        category: 'action',
+        durationInMinutes: 111,
+        category: 'animation',
         img: '/img/hero1.png',
-        releaseDate: '2000-02-03',
-        rating: 1,
+        releaseDate: '2007-06-29',
+        rating: 4,
     },
     {
         title: 'Matrix',
