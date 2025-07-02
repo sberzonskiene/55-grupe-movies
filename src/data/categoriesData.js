@@ -15,7 +15,7 @@ export const categoriesData = [
         title: 'Comedy',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum accusantium iste magni? Error omnis sequi nemo sit voluptatem sint dicta repellendus impedit nihil? Non impedit et temporibus cumque facere sequi!',
         moviesCount: 9,
-        href: '/Comedy',
+        href: '/comedy',
     },
     {
         title: 'Sci-Fi',
