@@ -7,6 +7,7 @@ import { publicApiRouter } from './routes/publicApiRouter.js';
 const app = express();
 
 app.use(express.static('public'));
+app.use(express.json());
 
 app.use('/', publicRouter);
 app.use('/', publicApiRouter);

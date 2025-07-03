@@ -7,9 +7,7 @@ import { PageRegister } from '../pages/Register.js';
 
 export const publicRouter = express.Router();
 
-publicRouter.get('/', (req, res) => {
-    return res.send(new PageHome().render());
-});
+publicRouter.get('/', (req, res) => res.send(new PageHome().render()));
 
 publicRouter.get('/movies', (req, res) => {
     return res.send(new PageMovies().render());
