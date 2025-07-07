@@ -106,7 +106,7 @@ export class IsValid {
             return [true, 'Turi buti tekstas'];
         }
 
-        if (text.length() === '') {
+        if (text.length === 0) {
             return [true, 'Tekstas turi buti ne tuscias'];
         }
 
