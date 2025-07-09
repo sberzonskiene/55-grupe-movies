@@ -91,5 +91,7 @@ export async function postLogin(req, res) {
         .json({
             status: 'success',
             msg: 'Tu buvai sekmingai prijungtas prie sistemos',
+            action: 'redirect',
+            href: '/admin',
         });
 }

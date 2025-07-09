@@ -11,7 +11,7 @@ export class AdminTemplate {
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>MOVIES</title>
+                <title>Express example</title>
                 <link rel="shortcut icon" href="/favicon.ico" />
                 <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
                 <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
@@ -83,9 +83,9 @@ export class AdminTemplate {
             <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
                 <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
                     <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
-                        <ul class="nav flex-column">
+                        <ul class="nav nav-pills flex-column">
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
+                                <a class="nav-link d-flex align-items-center gap-2 ${this.req.url === '/admin' ? 'active' : ''}" aria-current="page" href="/admin">
                                     Dashboard
                                 </a>
                             </li>
@@ -93,24 +93,24 @@ export class AdminTemplate {
                         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase">
                             <span>Categories</span>
                         </h6>
-                        <ul class="nav flex-column">
+                        <ul class="nav nav-pills flex-column">
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
+                                <a class="nav-link d-flex align-items-center gap-2 ${this.req.url === '/admin/categories/new' ? 'active' : ''}" aria-current="page" href="/admin/categories/new">
                                     New category
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
+                                <a class="nav-link d-flex align-items-center gap-2 ${this.req.url === '/admin/categories' ? 'active' : ''}" aria-current="page" href="/admin/categories">
                                     All categories
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
+                                <a class="nav-link d-flex align-items-center gap-2 ${this.req.url === '/admin/categories/published' ? 'active' : ''}" aria-current="page" href="/admin/categories/published">
                                     Published categories
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
+                                <a class="nav-link d-flex align-items-center gap-2 ${this.req.url === '/admin/categories/draft' ? 'active' : ''}" aria-current="page" href="/admin/categories/draft">
                                     Draft categories
                                 </a>
                             </li>
@@ -118,24 +118,24 @@ export class AdminTemplate {
                         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase">
                             <span>Movies</span>
                         </h6>
-                        <ul class="nav flex-column mb-auto">
+                        <ul class="nav nav-pills flex-column mb-auto">
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                                <a class="nav-link d-flex align-items-center gap-2 ${this.req.url === '/admin/movies/new' ? 'active' : ''}" href="/admin/movies/new">
                                     New movie
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                                <a class="nav-link d-flex align-items-center gap-2 ${this.req.url === '/admin/movies' ? 'active' : ''}" href="/admin/movies">
                                     All movies
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                                <a class="nav-link d-flex align-items-center gap-2 ${this.req.url === '/admin/movies/published' ? 'active' : ''}" href="/admin/movies/published">
                                     Published movies
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                                <a class="nav-link d-flex align-items-center gap-2 ${this.req.url === '/admin/movies/draft' ? 'active' : ''}" href="/admin/movies/draft">
                                     Draft movies
                                 </a>
                             </li>
