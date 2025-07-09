@@ -1,4 +1,5 @@
 import { commonHeaderMenuData } from "../data/headerData.js";
+import { sidebarMenuData } from "../data/sidebarData.js";
 
 export class AdminTemplate {
     constructor(req) {
