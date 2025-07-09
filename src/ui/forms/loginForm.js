@@ -5,8 +5,8 @@ export function loginForm() {
     let password = '';
 
     if (NODE_ENV === 'dev') {
-        email = 'chuck@norris.lt';
-        password = 'chuck@norris.lt';
+        email = 'saule@saule.lt';
+        password = 'saulesaulesaule';
     }
 
     return `
