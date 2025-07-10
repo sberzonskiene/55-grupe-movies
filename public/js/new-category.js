@@ -12,7 +12,7 @@ if (formDOM) {
         const data = {
             title: titleDOM.value,
             url: urlDOM.value,
-            description: descriptionDOM.value,  // ?????????????????? 👀👀👀👀
+            description: descriptionDOM.value,
             status: 'draft',
         };
 
