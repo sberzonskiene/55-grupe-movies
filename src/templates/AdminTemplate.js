@@ -12,7 +12,7 @@ export class AdminTemplate {
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>MOVIES</title>
+                <title>Express example</title>
                 <link rel="shortcut icon" href="/favicon.ico" />
                 <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
                 <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
@@ -20,6 +20,7 @@ export class AdminTemplate {
                 <meta name="apple-mobile-web-app-title" content="Coming soon" />
                 <link rel="manifest" href="/favicon/site.webmanifest" />
                 <link rel="stylesheet" href="/css/bootstrap.min.css">
+                <link rel="stylesheet" href="/css/custom.css">
             </head>`;
     }
 
