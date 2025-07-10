@@ -12,9 +12,12 @@ if (formDOM) {
         const data = {
             title: titleDOM.value,
             url: urlDOM.value,
-            description: descriptionDOM.value,
             status: 'draft',
         };
+
+        if (descriptionDOM.value) {
+            data.description = descriptionDOM.value;
+        }
 
         if (statusPublishedDOM.checked) {
             data.status = 'published';
