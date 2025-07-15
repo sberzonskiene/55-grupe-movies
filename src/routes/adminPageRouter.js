@@ -28,4 +28,4 @@ adminPageRouter.get('/movies/published', async (req, res) => res.send(await new 
 adminPageRouter.get('/movies/draft', async (req, res) => res.send(await new PageAdminMoviesDraft(req).render()));
 adminPageRouter.get('/movies/new', async (req, res) => res.send(await new PageAdminMoviesNew(req).render()));
 adminPageRouter.get('/movies/:urlSlug', async (req, res) => res.send(await new PageAdminMoviesView(req).render()));
-// adminPageRouter.get('/movies/:urlSlug/edit', async (req, res) => res.send(await new PageAdminMoviesView(req).render()));
+// adminPageRouter.get('/movies/:urlSlug/edit', async (req, res) => res.send(await

@@ -3,5 +3,3 @@ export const commonHeaderMenuData = [
     { href: '/movies', text: 'Movies' },
     { href: '/categories', text: 'Categories' },
 ];
-
-
