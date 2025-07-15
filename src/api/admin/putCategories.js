@@ -32,8 +32,13 @@ export async function putCategories(req, res) {
     const { title, url, status, description } = req.body;
 
     try {
-        const sql = ``;
-        const [response] = await connection.execute(sql, [title, url, status, description]);
+        const sql = `
+            UPDATE categories
+            SET title = ?, url_slug = ?, description = ?, status_id = (
+                SELECT id FROM category_status WHERE name = ?
+            )
+            WHERE url_slug = ?`;
+        const [response] = await connection.execute(sql, [title, url, description, status, original_url]);
 
         if (response.affectedRows !== 1) {
             return res.status(500).json({

@@ -92,7 +92,7 @@ export class PageTemplate {
         return `<script src="/js/${this.pageJS}.js" type="module"></script>`;
     }
 
-    main() {
+    async main() {
         return `
             <main class="container">
                 <div class="row">
@@ -103,14 +103,14 @@ export class PageTemplate {
             </main>`;
     }
 
-    render() {
+    async render() {
         return `
             <!DOCTYPE html>
             <html lang="en">
             ${this.head()}
             <body>
                 ${this.header()}
-                ${this.main()}
+                ${await this.main()}
                 ${this.footer()}
                 ${this.script()}
             </body>

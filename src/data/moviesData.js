@@ -1,7 +1,7 @@
 export const moviesData = [
     {
         title: 'Ratatouille',
-        url: '/ratatouille',
+        url_slug: '/ratatouille',
         description: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
         durationInMinutes: 111,
         category: 'animation',
@@ -11,32 +11,32 @@ export const moviesData = [
     },
     {
         title: 'Matrix',
-        url: '/matrix',
+        url_slug: 'matrix',
         description: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
         durationInMinutes: 100,
         category: 'action',
-        img: '/img/hero1.png',
+        img: '/img/hero.png',
         releaseDate: '2000-02-03',
         rating: 5,
     },
     {
         title: 'Matrix',
-        url: '/matrix',
+        url_slug: 'matrix',
         description: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
         durationInMinutes: 100,
         category: 'action',
-        img: '/img/hero1.png',
+        img: '/img/hero.png',
         releaseDate: '2000-02-03',
         rating: 3.5,
     },
     {
         title: 'Matrix',
-        url: '/matrix',
+        url_slug: 'matrix',
         description: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
         durationInMinutes: 100,
         category: 'action',
-        img: '/img/hero1.png',
+        img: '/img/hero.png',
         releaseDate: '2000-02-03',
         rating: 4.9,
     },
- ];
+];
