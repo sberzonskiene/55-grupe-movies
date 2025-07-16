@@ -1,17 +1,18 @@
+import { getAllCategories } from "../../../db/admin/getAllCategories.js";
 import { AdminTemplate } from "../../../templates/AdminTemplate.js";
 
 export class PageAdminMoviesNew extends AdminTemplate {
-    async main() {
-        const categories = [
-            {
-                id: 1,
-                title:'animation', 
+    constructor(req) {
+        super(req);
+        this.pageJS = 'new-movie';
     }
-];
+
+    async main() {
+        const categories = await getAllCategories();
         let categoriesHTML = '';
 
         for (const cat of categories) {
-            categoriesHTML += `<option>${cat}</option>`;
+            categoriesHTML += `<option value="${cat.id}">${cat.title}</option>`;
         }
 
         return `
@@ -42,11 +43,11 @@ export class PageAdminMoviesNew extends AdminTemplate {
                                 <p>Duration</p>
                                 <div class="mb-3 col-12 col-md-6">
                                     <label for="duration_hours" class="form-label">Hours</label>
-                                    <input type="number" class="form-control" id="duration_hours" required>
+                                    <input value="0" min="0" max="4" step="1" type="number" class="form-control" id="duration_hours">
                                 </div>
                                 <div class="mb-3 col-12 col-md-6">
                                     <label for="duration_minutes" class="form-label">minutes</label>
-                                    <input type="number" class="form-control" id="duration_minutes" required>
+                                    <input value="0" min="0" max="59" step="1" type="number" class="form-control" id="duration_minutes">
                                 </div>
                             </div>
                             <div class="mb-3">
@@ -58,20 +59,20 @@ export class PageAdminMoviesNew extends AdminTemplate {
                             </div>
                             <div class="mb-3">
                                 <label for="release_date" class="form-label">Release date</label>
-                                <input type="date" class="form-control" id="release_date" required>
+                                <input type="date" class="form-control" id="release_date">
                             </div>
                             <div class="mb-3">
                                 <label for="rating" class="form-label">Rating</label>
-                                <input type="number" min="1" max="5" step="0.1" class="form-control" id="rating" required>
+                                <input type="number" min="1" max="5" step="0.1" class="form-control" id="rating">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Status</label>
                                 <div class="form-check">
-                                    <input type="radio" name="radios" class="form-check-input" id="status_published" required>
+                                    <input type="radio" name="radios" class="form-check-input" id="status_published">
                                     <label class="form-check-label" for="status_published">Published</label>
                                 </div>
                                 <div class="form-check">
-                                    <input type="radio" name="radios" class="form-check-input" id="status_draft" checked required>
+                                    <input type="radio" name="radios" class="form-check-input" id="status_draft" checked>
                                     <label class="form-check-label" for="status_draft">Draft</label>
                                 </div>
                             </div>

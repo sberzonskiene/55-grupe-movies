@@ -140,4 +140,28 @@ export class IsValid {
 
         return [false, ''];
     }
+
+    static numberInteger(n) {
+        if (!Number.isInteger(n)) {
+            return [true, 'Turi buti sveikasis skaicius'];
+        }
+
+        if (n < 0) {
+            return [true, 'Turi buti teigiamas sveikasis skaicius'];
+        }
+
+        return [false, ''];
+    }
+
+    static numberFloat(n) {
+        if (!isFinite(n)) {
+            return [true, 'Turi buti skaicius'];
+        }
+
+        if (n < 0) {
+            return [true, 'Turi buti teigiamas skaicius'];
+        }
+
+        return [false, ''];
+    }
 }
