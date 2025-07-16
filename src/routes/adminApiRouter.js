@@ -1,7 +1,7 @@
 import express from 'express';
-import { postCategories } from '../api/admin/postCategories.js';
-import { deleteCategories } from '../api/admin/deleteCategories.js';
-import { putCategories } from '../api/admin/putCategories.js';
+import { postCategories } from '../api/admin/categories/postCategories.js';
+import { deleteCategories } from '../api/admin/categories/deleteCategories.js';
+import { putCategories } from '../api/admin/categories/putCategories.js';
 
 export const adminApiRouter = express.Router();
 

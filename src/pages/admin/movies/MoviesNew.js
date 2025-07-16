@@ -1,8 +1,13 @@
 import { AdminTemplate } from "../../../templates/AdminTemplate.js";
 
 export class PageAdminMoviesNew extends AdminTemplate {
-    main() {
-        const categories = ['pirmas', 'antras', 'trecias'];
+    async main() {
+        const categories = [
+            {
+                id: 1,
+                title:'animation', 
+    }
+];
         let categoriesHTML = '';
 
         for (const cat of categories) {
@@ -46,8 +51,8 @@ export class PageAdminMoviesNew extends AdminTemplate {
                             </div>
                             <div class="mb-3">
                                 <label for="category" class="form-label">Category</label>
-                                <select class="form-select">
-                                    <option>-- choose</option>
+                                <select class="form-select" id="category">
+                                    <option value="0">-- choose</option>
                                     ${categoriesHTML}
                                 </select>
                             </div>

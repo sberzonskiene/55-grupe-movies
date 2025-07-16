@@ -6,7 +6,7 @@ export function loginForm() {
 
     if (NODE_ENV === 'dev') {
         email = 'saule@saule.lt';
-        password = 'saulesaulesaule';
+        password = 'saule@saule.lt';
     }
 
     return `
