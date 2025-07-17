@@ -4,9 +4,10 @@ import { tableMovies } from "../../../ui/tables/tableMovies.js";
 
 export class PageAdminMovies extends AdminTemplate {
     constructor(req) {
-        super(req)
+        super(req);
         this.pageJS = 'movies-list';
     }
+
     async main() {
         const data = await getAllMovies();
 

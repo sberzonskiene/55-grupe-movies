@@ -11,6 +11,7 @@ import { PageAdminMoviesPublished } from '../pages/admin/movies/MoviesPublished.
 import { PageAdminCategoriesEdit } from '../pages/admin/categories/CategoriesEdit.js';
 import { PageAdminCategoriesView } from '../pages/admin/categories/CategoriesView.js';
 import { PageAdminMoviesView } from '../pages/admin/movies/MoviesView.js';
+import { PageAdminMoviesEdit } from '../pages/admin/movies/MoviesEdit.js';
 
 export const adminPageRouter = express.Router();
 
@@ -28,4 +29,4 @@ adminPageRouter.get('/movies/published', async (req, res) => res.send(await new 
 adminPageRouter.get('/movies/draft', async (req, res) => res.send(await new PageAdminMoviesDraft(req).render()));
 adminPageRouter.get('/movies/new', async (req, res) => res.send(await new PageAdminMoviesNew(req).render()));
 adminPageRouter.get('/movies/:urlSlug', async (req, res) => res.send(await new PageAdminMoviesView(req).render()));
-adminPageRouter.get('/movies/:urlSlug/edit', async (req, res) => res.send(await new PageAdminMoviesView(req).render()));
+adminPageRouter.get('/movies/:urlSlug/edit', async (req, res) => res.send(await new PageAdminMoviesEdit(req).render()));
