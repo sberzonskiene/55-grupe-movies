@@ -75,7 +75,7 @@ export class PageAdminMoviesView extends AdminTemplate {
                                     </tr>
                                     <tr class="mb-3">
                                         <td>Status</td>
-                                        <td>${movie.status === 'published'
+                                        <td>${movie.statusName === 'published'
                 ? '<span class="badge text-bg-success">Published</span>'
                 : '<span class="badge text-bg-warning">Draft</span>'
             }</td>
